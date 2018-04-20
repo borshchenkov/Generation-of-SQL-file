@@ -1,0 +1,103 @@
+i = 1
+time = 30
+ndate=int(input('Введите колличество дат:'))
+while ndate >= i:
+    t = 1
+    day=input('Введите число #'+str(i)+':')
+    mounth=input('Введите месяц #'+str(i)+':')
+    while time >= t:
+        if t == 1:
+            h = 15
+            m = 30
+        elif t == 2:
+            h = 15
+            m = 31
+        elif t == 3:
+            h = 15
+            m = 36
+        elif t == 4:
+            h = 15
+            m = 37
+        elif t == 5:
+            h = 15
+            m = 42
+        elif t == 6:
+            h = 15
+            m = 43
+        elif t == 7:
+            h = 15
+            m = 48
+        elif t == 8:
+            h = 15
+            m = 49
+        elif t == 9:
+            h = 15
+            m = 54
+        elif t == 10:
+            h = 15
+            m = 55
+        elif t == 11:
+            h = 16
+            m = "00"
+        elif t == 12:
+            h = 16
+            m = "01"
+        elif t == 13:
+            h = 16
+            m = "06"
+        elif t == 14:
+            h = 16
+            m = "07"
+        elif t == 15:
+            h = 16
+            m = 12
+        elif t == 16:
+            h = 16
+            m = 13
+        elif t == 17:
+            h = 16
+            m = 18
+        elif t == 18:
+            h = 16
+            m = 19
+        elif t == 19:
+            h = 16
+            m = 24
+        elif t == 20:
+            h = 16
+            m = 25
+        elif t == 21:
+            h = 16
+            m = 30
+        elif t == 22:
+            h = 16
+            m = 36
+        elif t == 23:
+            h = 16
+            m = 42
+        elif t == 24:
+            h = 16
+            m = 48
+        elif t == 25:
+            h = 16
+            m = 54
+        elif t == 26:
+            h = 17
+            m = "00"
+        elif t == 27:
+            h = 17
+            m = "06"
+        elif t == 28:
+            h = 17
+            m = 12
+        elif t == 29:
+            h = 17
+            m = 18
+        elif t == 30:
+            h = 17
+            m = 24
+        my_file = open("registration_lag.sql", "a")
+        my_file.write("\n("+str(int(day))+str(mounth)+str(t)+", \'"+str(int(day))+str(mounth)+"\', \'"+str(day)+"."+str(mounth)+".2018"+"\', \'"+str(h)+str(m)+"\', \'"+str(h)+":"+str(m)+"\', NULL),")
+        my_file.close()
+        t = t + 1
+    i = i + 1
